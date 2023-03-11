@@ -1,2 +1,122 @@
 @import './base.css';
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr;
+  gap: 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Search Search Search"
+    "Poster About Ratings"
+    "Actors-Writers Random Ratings";
+}
+
+.Search {
+  grid-area: Search;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Poster {
+  grid-area: Poster;
+  background-color: #f9c74f;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Actors-Writers {
+  grid-area: Actors-Writers;
+}
+
+.About {
+  grid-area: About;
+}
+
+.Ratings {
+  grid-area: Ratings;
+}
+
+.Random {
+  grid-area: Random;
+}
+
+
+
+.Actors-Writers div,
+.About div,
+.Ratings div {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Actors-Writers div p {
+  margin: 20px 0px;
+}
+
+.Ratings div h3 {
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f94144;
+}
+
+.Poster img {
+  max-width: 100%;
+}
+
+.Plot,
+.BoxOffice,
+.Website {
+  margin: 20px;
+}
+
+.About div h3 {
+  margin-right: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f8961e;
+}
+
+.About div p {
+  margin: 0px;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.Search input {
+  font-size: 1.2em;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.Search button {
+  font-size: 1.2em;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f94144;
+  color: #fff;
+}
+
+.Ratings div p {
+  margin: 0px;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+.Ratings {
+  display: flex;
+  flex-wrap: wrap;
+}
+
