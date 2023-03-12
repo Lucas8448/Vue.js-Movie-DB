@@ -51,20 +51,6 @@
         <p>{{ movie.Country }}</p>
       </div>
     </div>
-    <div v-if="movie.Title" class="Ratings">
-      <div class="imdbRating">
-        <h3>imdbRating</h3>
-        <p>{{ movie.imdbRating }}</p>
-      </div>
-      <div class="imdbVotes">
-        <h3>imdbVotes</h3>
-        <p>{{ movie.imdbVotes }}</p>
-      </div>
-      <div v-for="rating in movie.Ratings">
-        <h3>{{ rating.Source }}</h3>
-        <p>{{ rating.Value }}</p>
-      </div>
-    </div>
     <div v-if="movie.Title" class="BoxOffice">
       <h3>BoxOffice</h3>
       <p>{{ movie.BoxOffice }}</p>

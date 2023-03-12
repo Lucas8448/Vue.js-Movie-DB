@@ -152,35 +152,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.Ratings {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: var(--vt-c-black-soft);
-}
-
-.Ratings .imdbRating,
-.Ratings .imdbVotes {
-  padding: 0 1rem;
-}
-
-.Ratings .imdbRating h3,
-.Ratings .imdbVotes h3 {
-  margin-bottom: 0.5rem;
-}
-
-.Ratings .imdbRating p,
-.Ratings .imdbVotes p {
-  margin-bottom: 1rem;
-}
-
-.Ratings h3,
-.Ratings p {
-  margin-bottom: 1rem;
-}
-
 .BoxOffice {
   padding-left: 1rem;
   margin-bottom: 1rem;
