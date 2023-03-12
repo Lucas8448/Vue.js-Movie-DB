@@ -1,122 +1,244 @@
 @import './base.css';
 
+/* clean styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--vt-c-black-soft);
+}
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1.5fr 1fr;
-  gap: 20px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "Search Search Search"
-    "Poster About Ratings"
-    "Actors-Writers Random Ratings";
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius:2%;
+  background-color: var(--vt-c-white-soft);
 }
 
 .Search {
-  grid-area: Search;
-  justify-items: center;
-  align-items: center;
   display: flex;
-  justify-content: center;
-  background-color: #e8e8e8;
-  padding: 20px;
-  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Search input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: 15px/1 'Open Sans', sans-serif;
+  color: #40414F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 99%;
+  background-color: #EBEBEB;
+  border: none;
+  padding: 10px 11px 11px 11px;
+  border-radius: 1rem;
+  box-shadow: none;
+  outline: none;
+  margin: 0.5%;
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+
+.Search button {
+  width: 30%;
+  background-color: #343540;
+  color: var(--vt-c-white-soft);
+  border: none;
+  padding: 10px 11px 11px 10px;
+  border-radius: 1rem;
+  box-shadow: none;
+  outline: none;
+  margin: 0.5%;
+  box-sizing: border-box;
 }
 
 .Poster {
-  grid-area: Poster;
-  background-color: #f9c74f;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.Actors-Writers {
-  grid-area: Actors-Writers;
-}
-
-.About {
-  grid-area: About;
-}
-
-.Ratings {
-  grid-area: Ratings;
-}
-
-.Random {
-  grid-area: Random;
-}
-
-
-
-.Actors-Writers div,
-.About div,
-.Ratings div {
-  margin: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.Actors-Writers div p {
-  margin: 20px 0px;
-}
-
-.Ratings div h3 {
-  margin-right: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f94144;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .Poster img {
   max-width: 100%;
+  border-radius: 5%;
 }
 
-.Plot,
-.BoxOffice,
-.Website {
-  margin: 20px;
+.Actors-Writers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
 }
 
-.About div h3 {
-  margin-right: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f8961e;
+.Actors,
+.Writers {
+  flex: 1;
+  padding: 0 1rem;
 }
 
-.About div p {
-  margin: 0px;
-  font-size: 1.1em;
-  font-weight: normal;
+.Actors h3,
+.Writers h3 {
+  margin-bottom: 0.5rem;
 }
 
-.Search input {
-  font-size: 1.2em;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  border: none;
+.Actors p,
+.Writers p {
+  margin-bottom: 1rem;
 }
 
-.Search button {
-  font-size: 1.2em;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #f94144;
-  color: #fff;
+.Plot {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
 }
 
-.Ratings div p {
-  margin: 0px;
-  font-size: 1.1em;
-  font-weight: normal;
+.Plot h3 {
+  margin-bottom: 0.5rem;
+}
+
+.Plot p {
+  margin-bottom: 1rem;
+}
+
+.About {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
+}
+
+.About .Title,
+.About .Year,
+.About .Genre,
+.About .Director,
+.About .Runtime,
+.About .Language,
+.About .Country {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.About .Title h3,
+.About .Year h3,
+.About .Genre h3,
+.About .Director h3,
+.About .Runtime h3,
+.About .Language h3,
+.About .Country h3 {
+  margin-bottom: 0.5rem;
+}
+
+.About .Title p,
+.About .Year p,
+.About .Genre p,
+.About .Director p,
+.About .Runtime p,
+.About .Language p,
+.About .Country p {
+  margin-bottom: 1rem;
 }
 
 .Ratings {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
 }
 
+.Ratings .imdbRating,
+.Ratings .imdbVotes {
+  padding: 0 1rem;
+}
+
+.Ratings .imdbRating h3,
+.Ratings .imdbVotes h3 {
+  margin-bottom: 0.5rem;
+}
+
+.Ratings .imdbRating p,
+.Ratings .imdbVotes p {
+  margin-bottom: 1rem;
+}
+
+.Ratings h3,
+.Ratings p {
+  margin-bottom: 1rem;
+}
+
+.BoxOffice {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
+}
+
+.BoxOffice h3 {
+  margin-bottom: 0.5rem;
+}
+
+.BoxOffice p {
+  margin-bottom: 1rem;
+}
+
+.Production {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
+}
+
+.Website {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
+}
+
+.Website h3 {
+  margin-bottom: 0.5rem;
+}
+
+.Website p {
+  margin-bottom: 1rem;
+}
+
+.Random {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--vt-c-black-soft);
+}
+
+.Random .Awards {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.Random .Awards h3 {
+  margin-bottom: 0.5rem;
+}
+
+.Random .Awards p {
+  margin-bottom: 1rem;
+}
