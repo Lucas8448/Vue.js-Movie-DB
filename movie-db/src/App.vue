@@ -55,11 +55,6 @@
       <h3>BoxOffice</h3>
       <p>{{ movie.BoxOffice }}</p>
     </div>
-    <div v-if="movie.Title" class="Production"></div>
-    <div v-if="movie.Title" class="Website">
-      <h3>Website</h3>
-      <p>{{ movie.Website }}</p>
-    </div>
     <div v-if="movie.Title" class="Random">
       <div class="Awards">
         <h3>Awards</h3>
